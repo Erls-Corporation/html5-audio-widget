@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== HTML5 Audio Widget ===
 Contributors: pdxids, andrewsfreeman
 Donate link: http://pdxids.com/
 Tags: html5, audio, widget
