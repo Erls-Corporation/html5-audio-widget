@@ -1,0 +1,261 @@
+/*
+ * Skin for jPlayer Plugin (jQuery JavaScript Library)
+ * http: //www.happyworm.com/jquery/jplayer
+ *
+ * Skin Name: Blue Monday
+ *
+ * Copyright (c) 2010 Happyworm Ltd
+ * Dual licensed under the MIT and GPL licenses.
+ *  - http: //www.opensource.org/licenses/mit-license.php
+ *  - http: //www.gnu.org/copyleft/gpl.html
+ *
+ * Author: Silvia Benvenuti
+ * Skin Version: 3.0 (jPlayer 2.0.0)
+ * Date: 20th December 2010
+ */
+ 
+div.jp-audio {
+	width: 220px
+}
+
+/* INTERFACE */
+div.jp-interface {
+	padding-top: 9px;
+	position: relative;
+	width: 100%;
+	height: 90px;
+	background: #252A31 url(../../../images/bg-gradient.png) repeat-x;
+	
+	-webkit-border-bottom-left-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  -khtml-border-radius-bottomleft: 4px;
+  -khtml-border-radius-bottomright: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  -moz-border-radius-bottomright: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  -webkit-background-clip: padding-box;
+  -khtml-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+/* CONTROLS */
+div.jp-interface .jp-controls-wrap {
+	position: absolute;
+	top: -130px;
+	left: 50%;
+	width: 130px;
+	height: 50px;
+	list-style-type: none;
+	padding: 0;
+	margin: 0 0 0 -65px;
+	background: #000;
+	background: rgba(0,0,0,0.8);
+	
+	-webkit-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-background-clip: padding-box;
+  -khtml-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;	
+}
+div.jp-interface ul.jp-controls {
+	position: relative;
+	display: inline
+}
+div.jp-interface ul.jp-controls li {
+	display: inline
+}
+div.jp-interface ul.jp-controls a {
+	position: absolute;
+	text-indent: -9999em
+}
+
+/* BUTTONS */
+div.jp-audio div.jp-type-playlist a.jp-play,
+div.jp-audio div.jp-type-playlist a.jp-pause {
+	top: 5px;
+	left: 45px
+}
+
+a.jp-play,
+a.jp-pause {
+	width: 41px;
+	height: 40px;
+	z-index: 1
+}
+
+a.jp-play {
+	background: url(../../../images/icons-buttons.png) 0 0 no-repeat;
+}
+a.jp-play:hover {
+	background-position: -40px 0;
+}
+
+a.jp-pause {
+	background: url(../../../images/icons-buttons.png) 0 -40px no-repeat;
+	display: none
+}
+a.jp-pause:hover {
+	background-position: -40px -40px;
+}
+
+div.jp-audio div.jp-type-playlist a.jp-previous {
+	left: 10px;
+	top: 10px
+}
+
+a.jp-previous {
+	background: url(../../../images/icons-buttons.png) 0 -240px no-repeat;
+	width: 31px;
+	height: 31px
+}
+a.jp-previous:hover {
+	background-position: -40px -240px;
+}
+
+div.jp-audio div.jp-type-playlist a.jp-next {
+	top: 10px;
+	left: 90px;
+}
+
+a.jp-next {
+	background: url(../../../images/icons-buttons.png) 0 -280px no-repeat;
+	width: 30px;
+	height: 30px
+}
+a.jp-next:hover {
+	background-position: -40px -280px;
+}
+
+div.jp-progress {
+	position: absolute;
+	overflow: hidden;
+	background-color: #ddd
+}
+
+div.jp-audio div.jp-type-playlist div.jp-progress {
+	bottom: 15px;
+	left: 10px;
+		
+	width: 150px;
+	height: 6px;
+	padding: 1px;
+	background: url(../../../images/player-progress-bars.png) 0 -20px repeat-x ;
+	
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+  -webkit-background-clip: padding-box;
+  -khtml-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;	
+}
+
+div.jp-seek-bar {
+	width: 0px;
+	height: 6px;
+	cursor: pointer;
+	background: url(../../../images/player-progress-bars.png) 0 -10px repeat-x;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -khtml-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;	
+}
+
+div.jp-play-bar {
+	width: 0px;
+	height: 6px;
+	background: url(../../../images/player-progress-bars.png) 0 0 repeat-x ;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -khtml-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;	
+}
+
+/* The seeking class is added/removed inside jPlayer */
+div.jp-seeking-bg {
+	background: url(pbar-ani.gif)
+}
+
+/* CURRENT TIME */
+div.jp-current-time {
+	position: absolute;
+	font-size: 12px;
+}
+
+div.jp-current-time {
+	text-align: right
+}
+
+div.jp-audio div.jp-type-playlist div.jp-current-time {
+	bottom: 10px;
+	right: 10px;
+	width: 122px
+}
+
+div.jp-playlist {
+/* width: 418px; */
+	width: 100%;
+	background-color: #ccc;
+	border-top: none
+}
+
+div.jp-playlist ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0 20px;
+	font-size: .72em
+}
+
+div.jp-type-playlist div.jp-playlist li {
+	padding: 5px 0 4px 20px;
+	border-bottom: 1px solid #eee
+}
+
+div.jp-type-playlist div.jp-playlist li.jp-playlist-last {
+	padding: 5px 0 5px 20px;
+	border-bottom: none
+}
+
+div.jp-type-playlist div.jp-playlist li.jp-playlist-current {
+	list-style-type: square;
+	list-style-position: inside;
+	padding-left: 8px
+}
+
+div.jp-type-playlist div.jp-playlist a {
+	color: #666;
+	text-decoration: none
+}
+
+div.jp-type-playlist div.jp-playlist a:hover {
+	color: #0d88c1
+}
+
+div.jp-type-playlist div.jp-playlist a.jp-playlist-current {
+	color: #0d88c1
+}
+
+div.jp-type-playlist div.jp-playlist div.jp-free-media {
+	display: inline;
+	margin-left: 20px
+}
+
+div.jp-jplayer {
+	width: 0;
+	height: 0
+}
+
+div.jp-jplayer {
+	background-color: #000
+}
