@@ -3,8 +3,12 @@
 .pid-media-player .track-info {
     padding-left: 1em;
 }
-.pid-media-player .track-info li {
+.pid-media-player .jp-audio .track-info li {
     color: #ccccdd;
+    margin-bottom: 0em;
+    font-size: 14px;
+    background: none;
+    padding-left: 0;
 }
 .pid-media-player .track-info .track-name {
     text-shadow: rgba(0,0,0,1) 1px 1px 1px;
@@ -21,14 +25,18 @@
 }
 .pid-media-player .artwork {
 line-height: 0;
+padding: 0 !important;
+
 }
 .pid-media-player .artwork img {
   max-width: 100%;
-  }
+  margin: 0px;
+}
 .pid-media-player {
     position: relative;
     overflow: visible;
     min-height: 300px;
+    max-width: 220px;
 }
 .jp-controls a {
   position: absolute;
@@ -66,6 +74,7 @@ line-height: 0;
   margin: 0 0 0 -65px;
   background: #000;
   background: rgba(0, 0, 0, 0.8);
+  padding: 0 !important;
 }
 .jp-progress {
   position: absolute;
@@ -182,24 +191,24 @@ a.jp-next:hover {
 .jp-playlist-trigger.active {
   background-position: 0 -120px;
 }
-.jp-playlist ul {
+.pid-media-player .jp-playlist ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  margin: 0 !important;
+  padding: 0 !important;
   font-size: 12px;
 }
-.jp-type-playlist .jp-playlist li {
+.pid-media-player .jp-type-playlist .jp-playlist li {
   padding: 5px 10px;
   border-top: 1px solid #3f434a !important;
   list-style-type: decimal;
   list-style-position: inside;
 }
-.jp-type-playlist .jp-playlist li:hover {
+.pid-media-player .jp-type-playlist .jp-playlist li:hover {
   list-style: none;
   padding-left: 23px;
   background: url(images/icons-buttons-small.png) 6px 6px no-repeat;
 }
-.jp-type-playlist .jp-playlist li.jp-playlist-current {
+.pid-media-player .jp-type-playlist .jp-playlist li.jp-playlist-current {
   list-style: none;
   padding-left: 23px;
   background: url(images/icons-buttons-small.png) 8px -52px no-repeat;
