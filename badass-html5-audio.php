@@ -32,17 +32,16 @@ function pid_jquery(){
  * This function actually displays the audio player. Used in the widget class follows.
  */
   
-function pid_display_player( $album = 'default' ) {
+function pid_display_player( $album = '' ) {
 
-$audio_player_album = $album;
-$audio_player_album_link = get_post_permalink( $audio_player_album );
-$audio_player_album_id = get_page_by_title($audio_player_album);
+$audio_player_album = get_the_title( $album );
+$audio_player_album_id = $album;
 
 $artwork_image_source = PID_URL . '/images/default-album-artwork.png';
 							
 
 ?>
-	<div class="widget pid-media-player">
+	<div class="pid-media-player">
 	  	
 	  	<div class="artwork"><img src="<?php echo $artwork_image_source; ?>" alt="album artwork" /></div>
 	  	
@@ -303,13 +302,12 @@ function pid_register_widgets() {
     register_widget( 'pid_widget_html5' );
 }
 
-//boj_widget_my_info class
 class pid_widget_html5 extends WP_Widget {
 
     //process the new widget
     function pid_widget_html5() {
         $widget_ops = array( 
-			'classname' => 'pid_widget_html5_widget_class', 
+			'classname' => 'widget_pid_widget_html5_widget_class', 
 			'description' => 'Displays the HTML5 audio player as a widget.' 
 			); 
         $this->WP_Widget( 'pid_widget_html5', 'Badass HTML5 Audio', $widget_ops );
@@ -317,18 +315,31 @@ class pid_widget_html5 extends WP_Widget {
  
      //build the widget settings form
     function form( $instance ) {
-        $defaults = array( 'album' => 'Default' ); 
+        $defaults = array( 'album' => '0' );
         $instance = wp_parse_args( (array) $instance, $defaults );
         $album = $instance['album'];
         ?>
-            <p>Play which album? Enter title: <input class="widefat" name="<?php echo $this->get_field_name( 'album' ); ?>"  type="text" value="<?php echo esc_attr( $album ); ?>" /></p>
+            <p>Play which album?:
+			<?php 
+			$args = array(
+				'sort_order'   => 'ASC',
+				'sort_column'  => 'post_title',
+				'selected'     => $album,
+				'hierarchical' => 0,
+				'echo'         => 1,
+				'name'         => $this->get_field_name('album'),
+				'post_type'    => 'discography',
+				);
+			wp_dropdown_pages( $args );
+			?>
+            </p>
         <?php
     }
  
     //save the widget settings
     function update( $new_instance, $old_instance ) {
         $instance = $old_instance;
-        $instance['album'] = strip_tags( $new_instance['album'] );
+        $instance['album'] = $new_instance['album'];
         return $instance;
     }
  

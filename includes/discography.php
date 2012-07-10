@@ -32,7 +32,7 @@ function pid_discography_init()  {
     'rewrite'            => array( 'slug' => 'album' ),
     'capability_type'    => 'post',
     'has_archive'        => 'discography', 
-    'hierarchical'       => false,
+    'hierarchical'       => true,
     'menu_position'      => null,
     'supports'           => array( 'title', 'thumbnail', 'editor' ),
     'menu_position'      => 5
