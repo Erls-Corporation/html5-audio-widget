@@ -358,3 +358,12 @@ class pid_widget_html5 extends WP_Widget {
         echo $after_widget;
     }
 }
+
+function pid_html5_shortcode( $atts ) {
+	extract( shortcode_atts( array(
+		'id' => '0',
+	), $atts ) );
+
+	return pid_display_player( $id );
+}
+add_shortcode( 'html5-audio', 'pid_html5_shortcode' );
